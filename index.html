@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet&Style – Estilo e cuidados para seu pet</title>
+
+    <!-- 1) Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- 2) Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#03a6a1",
+              secondary: "#ffe3bb",
+              accent: "#ffa673",
+              danger: "#ff4f0f",
+            },
+            fontFamily: {
+              heading: ["Poppins", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Opcional: smooth scroll para links internos */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-body text-gray-800 antialiased">
+    <header class="bg-white shadow-md sticky top-0 z-10">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-2xl font-heading text-primary">Pet&amp;Style</div>
+        <nav class="space-x-6 text-gray-700 hidden md:flex">
+          <a href="#" class="hover:text-primary transition">Home</a>
+          <a href="#produtos" class="hover:text-primary transition">Produtos</a>
+          <a href="#depoimentos" class="hover:text-primary transition"
+            >Depoimentos</a
+          >
+          <a href="#contato" class="hover:text-primary transition">Contato</a>
+        </nav>
+        <button id="menu-btn" class="md:hidden text-primary focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="menu-mobile" class="md:hidden bg-white hidden">
+        <a href="#" class="block px-4 py-3 hover:bg-secondary transition"
+          >Home</a
+        >
+        <a
+          href="#produtos"
+          class="block px-4 py-3 hover:bg-secondary transition"
+          >Produtos</a
+        >
+        <a
+          href="#depoimentos"
+          class="block px-4 py-3 hover:bg-secondary transition"
+          >Depoimentos</a
+        >
+        <a href="#contato" class="block px-4 py-3 hover:bg-secondary transition"
+          >Contato</a
+        >
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-secondary py-20">
+      <div
+        class="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-8">
+        <div class="lg:w-1/2">
+          <h1 class="text-4xl lg:text-5xl font-heading text-gray-800 mb-4">
+            Dê estilo e carinho ao dia a dia do seu pet
+          </h1>
+          <p class="text-lg text-gray-600 mb-6">
+            Acesse coleiras, camas, brinquedos e acessórios exclusivos para
+            tornar cada momento do seu melhor amigo inesquecível.
+          </p>
+          <a
+            href="#produtos"
+            class="inline-block bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-accent transition-shadow shadow-md"
+            >Conhecer Produtos</a
+          >
+        </div>
+        <div class="lg:w-1/2">
+          <img
+            src="imagens/cachorro.jpg"
+            alt="Pet estiloso"
+            class="w-full rounded-xl shadow-xl object-cover" />
+        </div>
+      </div>
+    </section>
+    <section id="produtos" class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-heading text-center text-gray-800 mb-12">
+          Nossos Produtos
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+            <img
+              src="imagens/caminha.jpg"
+              alt="Caminha pet"
+              class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-heading text-gray-800 mb-2">
+                Caminha Conforto
+              </h3>
+              <p class="text-gray-600 flex-1">
+                Design elegante e acolchoamento extra para o descanso perfeito.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-primary font-bold text-lg">R$ 129,90</span>
+                <a
+                  href="#"
+                  class="bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-accent transition"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+            <img
+              src="imagens/acessorio.jpg"
+              alt="Brinquedo pet"
+              class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-heading text-gray-800 mb-2">
+                Kit Brinquedo Interativo
+              </h3>
+              <p class="text-gray-600 flex-1">
+                Estimula a mente e o corpo do seu pet durante horas de diversão.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-primary font-bold text-lg">R$ 49,90</span>
+                <a
+                  href="#"
+                  class="bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-accent transition"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+            <img
+              src="imagens/coleira.jpg"
+              alt="Coleira pet"
+              class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-heading text-gray-800 mb-2">
+                Kit Passeios
+              </h3>
+              <p class="text-gray-600 flex-1">Kit com 5 x por semana.</p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-primary font-bold text-lg">R$ 750,90</span>
+                <a
+                  href="#"
+                  class="bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-accent transition"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+            <img
+              src="imagens/partos.jpg"
+              alt="Acessório pet"
+              class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-heading text-gray-800 mb-2">
+                Partos planejados para raças pequenas
+              </h3>
+              <p class="text-gray-600 flex-1">
+                Assistência completa, com os melhores médicos.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-primary font-bold text-lg">R$ 1000,00</span>
+                <a
+                  href="#"
+                  class="bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-accent transition"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="bg-secondary py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-heading text-center text-gray-800 mb-8">
+          O que dizem nossos clientes
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <p class="italic text-gray-700">
+              “Produtos incríveis e atendimento exemplar! O Scooby nunca foi tão
+              feliz.”
+            </p>
+            <div class="mt-4 font-heading text-primary">— Ana Silva</div>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <p class="italic text-gray-700">
+              “A caminha é linda e super confortável. Recomendo a todos os
+              tutores!”
+            </p>
+            <div class="mt-4 font-heading text-primary">— Bruno Souza</div>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <p class="italic text-gray-700">
+              “Entrega rápida e produtos de alta qualidade. Nosso doguinho ama!”
+            </p>
+            <div class="mt-4 font-heading text-primary">— Carla Pereira</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-16">
+      <div
+        class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-2xl font-heading text-gray-800 mb-4">Fale Conosco</h2>
+          <p class="mb-2">
+            ✉️
+            <a href="mailto:email@petstyle.com.br" class="hover:text-primary"
+              >email@petstyle.com.br</a
+            >
+          </p>
+          <p class="mb-6">
+            📞
+            <a href="tel:+5511987654321" class="hover:text-primary"
+              >(11) 98765-4321</a
+            >
+          </p>
+          <p class="text-gray-600">
+            Tem dúvidas, sugestões ou quer parcerias? Envie sua mensagem abaixo!
+          </p>
+        </div>
+        <form class="space-y-4 bg-white p-6 rounded-xl shadow-md">
+          <input
+            type="text"
+            placeholder="Seu nome"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+          <input
+            type="email"
+            placeholder="Seu e-mail"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+          <textarea
+            rows="4"
+            placeholder="Mensagem"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary resize-none"></textarea>
+          <button
+            type="submit"
+            class="w-full bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-accent transition-shadow shadow">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white py-6">
+      <div class="container mx-auto px-4 text-center text-gray-600">
+        © 2025 Pet&amp;Style. Todos os direitos reservados.
+      </div>
+    </footer>
+
+    <!-- Script de toggle do menu mobile -->
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu-mobile");
+      btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+    </script>
+  </body>
+</html>
